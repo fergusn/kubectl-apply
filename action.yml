@@ -1,12 +1,12 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
+name: 'kubectl apply'
+description: 'Deploy to Kubernetes with kubectl'
+author: 'fergusn'
 inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+  filename:
+    description: 'Filename that contains the configuration to apply'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.myInput }}
+  - --filename
+  - ${{ inputs.filename }}
