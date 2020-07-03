@@ -6,7 +6,7 @@ inputs:
     description: 'Filename that contains the configuration to apply'
 runs:
   using: 'docker'
-  image: 'docker://docker.pkg.github.com/fergusn/kubectl-apply/apply'
+  image: 'docker://fergusn/kubectl:apply'
   args:
   - --filename
   - ${{ inputs.filename }}
