@@ -1,4 +1,4 @@
-name: 'kubectl apply'
+name: 'kubectl-apply'
 description: 'Deploy to Kubernetes with kubectl'
 author: 'fergusn'
 inputs: 
@@ -8,5 +8,6 @@ runs:
   using: 'docker'
   image: 'docker://fergusn/kubectl:apply'
   args:
+  - apply
   - --filename
   - ${{ inputs.filename }}
